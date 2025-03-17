@@ -1,0 +1,20 @@
+{
+    "modes": {
+        "mode2": {
+            "coverage": {},
+            "results": [
+                "cmp.log",
+                "Test_Case_1_123456.log",
+                "Test_Case_2_987654.log"
+            ]
+        },
+        "mode1": {
+            "coverage": {},
+            "results": [
+                "cmp.log",
+                "Test_Case_1_123456.log",
+                "Test_Case_2_987654.log"
+            ]
+        }
+    }
+}

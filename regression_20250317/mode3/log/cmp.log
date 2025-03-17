@@ -1,0 +1,5 @@
+echo "Compiling mode: mode3"
+Compiling mode: mode3
+mkdir -p mode3/exec mode3/log mode3/cov mode3/wave
+./mock_vcs.sh mode3/log/cmp.log
+[INFO] Compilation successful. Log: mode3/log/cmp.log

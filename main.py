@@ -65,8 +65,9 @@ def main():
 
     if not gconf.skip_cov_gen:
         for mode in gconf.mode:
-            coverage.generate_coverage_report(mode)
-            coverage.generate_testplan_annotation(mode)
+            # 为每个模式生成覆盖率报告
+            if not coverage.generate_coverage_report(mode):
+                gconf.logger.error(f"Failed to generate coverage report for mode: {mode}")
 
     reporter.generate_final_report()
 

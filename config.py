@@ -4,6 +4,7 @@ import time
 from logger import Logger
 from regress_loader import RegressLoader
 
+
 class GConf:
     """
     全局配置管理类，用于解析命令行参数、动态加载用户配置，并管理工具的全局状态
@@ -35,8 +36,6 @@ class GConf:
         config_class = loader.load_regress_class("regress_cfg")
 
         # 配置类加载的参数
-        # self.mode = self.mode or getattr(config_class, "DEFAULT_MODES", [])
-        # 从命令行解析 mode
         if args.mode:
             self.mode = args.mode  # 使用命令行模式列表
         else:
@@ -49,7 +48,11 @@ class GConf:
 
         # 调试日志
         self.logger.info(f"[DEBUG] Final mode list: {self.mode}")
-        self.tc_list = self._load_testcases(args.testcases, config_class)
+
+        # 加载测试用例并规范化键名为小写
+        testcases = self._load_testcases(args.testcases, config_class)
+        self.tc_list = self._normalize_case_keys(testcases)
+
         self.blk_name = getattr(config_class, "BLK_NAME", "default_block")  # 测试块名称
 
         # 配置覆盖率功能
@@ -63,6 +66,27 @@ class GConf:
 
         # 初始化目录结构
         self._prepare_directories()
+
+    def _normalize_case_keys(self, testcases):
+        """
+        将测试用例中的所有键名转换为小写，并补充默认值
+        """
+        normalized_testcases = []
+        default_fields = {
+            "wave": "off",  # 默认关闭波形
+            "ccov": "on"    # 默认开启覆盖率
+        }
+        for case in testcases:
+            if isinstance(case, dict):
+                # 将键转换为小写并补充默认值
+                normalized_case = {key.lower(): value for key, value in case.items()}
+                for key, default in default_fields.items():
+                    normalized_case.setdefault(key, default)  # 插入默认值
+                normalized_testcases.append(normalized_case)
+            else:
+                self.logger.warning(f"[WARNING] Skipping invalid testcase: {case}")
+        self.logger.info(f"[INFO] Normalized {len(normalized_testcases)} testcases with defaults.")
+        return normalized_testcases
 
     def _extract_modes_from_testcases(self, config_class):
         """
@@ -111,7 +135,7 @@ class GConf:
             except Exception as e:
                 self.logger.error(f"Failed to load testcases from file: {testcase_file}. Error: {e}")
                 raise
-        # 如果未提供文件，使用配置类中的默认用例列表
+        # 如果未提供文件，使用配置类中的默认 TC_LIST
         return getattr(config_class, "TC_LIST", [])
 
     def _prepare_directories(self):

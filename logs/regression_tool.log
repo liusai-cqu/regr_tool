@@ -1,0 +1,426 @@
+2025-03-17 19:22:43 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:22:43 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:22:43 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:22:43 [INFO] [INFO] Extracted modes from TC_LIST: {'mode2', 'mode3', 'mode1'}
+2025-03-17 19:22:43 [INFO] [DEBUG] Final mode list: ['mode2', 'mode3', 'mode1']
+2025-03-17 19:22:43 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:22:43 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:22:43 [INFO] Compiling mode: mode2...
+2025-03-17 19:22:43 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:22:43 [ERROR] Compilation failed for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:22:43 [ERROR] Error during compilation for mode: mode2: Compilation failed for mode: mode2
+2025-03-17 19:27:58 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:27:58 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:27:58 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:27:58 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode3', 'mode2'}
+2025-03-17 19:27:58 [INFO] [DEBUG] Final mode list: ['mode1', 'mode3', 'mode2']
+2025-03-17 19:27:58 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:27:58 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:27:58 [INFO] Compiling mode: mode1...
+2025-03-17 19:27:58 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:28:00 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:28:00 [INFO] Compiling mode: mode3...
+2025-03-17 19:28:00 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:28:02 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:28:02 [INFO] Compiling mode: mode2...
+2025-03-17 19:28:02 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:28:04 [ERROR] Compilation failed for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:28:04 [ERROR] Error during compilation for mode: mode2: Compilation failed for mode: mode2
+2025-03-17 19:31:08 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:31:08 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:31:08 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:31:08 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode3', 'mode2'}
+2025-03-17 19:31:08 [INFO] [DEBUG] Final mode list: ['mode1', 'mode3', 'mode2']
+2025-03-17 19:31:08 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:31:08 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:31:08 [INFO] Compiling mode: mode1...
+2025-03-17 19:31:08 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:31:10 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:31:10 [INFO] Compiling mode: mode3...
+2025-03-17 19:31:10 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:31:12 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:31:12 [INFO] Compiling mode: mode2...
+2025-03-17 19:31:12 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:31:14 [ERROR] Compilation failed for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:31:14 [ERROR] Error during compilation for mode: mode2: Compilation failed for mode: mode2
+2025-03-17 19:34:52 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:34:52 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:34:52 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:34:52 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode1', 'mode2'}
+2025-03-17 19:34:52 [INFO] [DEBUG] Final mode list: ['mode3', 'mode1', 'mode2']
+2025-03-17 19:34:52 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:34:52 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:34:52 [INFO] Compiling mode: mode3...
+2025-03-17 19:34:52 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:34:54 [ERROR] Compilation failed for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:34:54 [ERROR] Error during compilation for mode: mode3: Compilation failed for mode: mode3
+2025-03-17 19:36:50 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:36:50 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:36:50 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:36:50 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode1', 'mode2'}
+2025-03-17 19:36:50 [INFO] [DEBUG] Final mode list: ['mode3', 'mode1', 'mode2']
+2025-03-17 19:36:50 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:36:50 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:36:50 [INFO] Compiling mode: mode3...
+2025-03-17 19:36:50 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:36:52 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:36:52 [INFO] Compiling mode: mode1...
+2025-03-17 19:36:52 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:36:54 [ERROR] Compilation failed for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:36:54 [ERROR] Error during compilation for mode: mode1: Compilation failed for mode: mode1
+2025-03-17 19:42:46 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:42:46 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:42:46 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:42:46 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode2', 'mode1'}
+2025-03-17 19:42:46 [INFO] [DEBUG] Final mode list: ['mode3', 'mode2', 'mode1']
+2025-03-17 19:42:46 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:42:46 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:42:46 [INFO] Compiling mode: mode3...
+2025-03-17 19:42:46 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:42:48 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:42:48 [INFO] Compiling mode: mode2...
+2025-03-17 19:42:48 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:42:50 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:42:50 [INFO] Compiling mode: mode1...
+2025-03-17 19:42:50 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:42:53 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:42:53 [INFO] Case list: [{'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}, {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}]
+2025-03-17 19:42:53 [INFO] Starting simulations for mode: mode3
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}
+2025-03-17 19:42:53 [INFO] Simulation completed for mode: mode3. Failed cases: 2
+2025-03-17 19:42:53 [INFO] Starting simulations for mode: mode2
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}
+2025-03-17 19:42:53 [INFO] Simulation completed for mode: mode2. Failed cases: 2
+2025-03-17 19:42:53 [INFO] Starting simulations for mode: mode1
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}
+2025-03-17 19:42:53 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}
+2025-03-17 19:42:53 [INFO] Simulation completed for mode: mode1. Failed cases: 2
+2025-03-17 19:42:53 [INFO] Generating coverage report for mode: mode3
+2025-03-17 19:42:53 [ERROR] Coverage generation failed for mode: mode3
+2025-03-17 19:42:53 [ERROR] Coverage generation error for mode: mode3. Exception: Urg command error
+2025-03-17 19:49:18 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:49:18 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:49:18 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:49:18 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode2', 'mode1'}
+2025-03-17 19:49:18 [INFO] [DEBUG] Final mode list: ['mode3', 'mode2', 'mode1']
+2025-03-17 19:49:18 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:49:18 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:49:18 [INFO] Compiling mode: mode3...
+2025-03-17 19:49:18 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:49:20 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:49:20 [INFO] Compiling mode: mode2...
+2025-03-17 19:49:20 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:49:23 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:49:23 [INFO] Compiling mode: mode1...
+2025-03-17 19:49:23 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:49:25 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:51:02 [INFO] Case list: [{'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}, {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}]
+2025-03-17 19:51:27 [INFO] Starting simulations for mode: mode3
+2025-03-17 19:51:47 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}
+2025-03-17 19:53:25 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 19:53:25 [INFO] Loading configuration class: regress_cfg
+2025-03-17 19:53:25 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 19:53:25 [INFO] [INFO] Extracted modes from TC_LIST: {'mode2', 'mode1', 'mode3'}
+2025-03-17 19:53:25 [INFO] [DEBUG] Final mode list: ['mode2', 'mode1', 'mode3']
+2025-03-17 19:53:25 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 19:53:25 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 19:53:25 [INFO] Compiling mode: mode2...
+2025-03-17 19:53:25 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:53:27 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 19:53:27 [INFO] Compiling mode: mode1...
+2025-03-17 19:53:27 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:53:29 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 19:53:29 [INFO] Compiling mode: mode3...
+2025-03-17 19:53:29 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:53:32 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 19:53:50 [INFO] Case list: [{'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}, {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}]
+2025-03-17 19:53:50 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:00:14 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:00:14 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:00:14 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:00:14 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode1', 'mode2'}
+2025-03-17 20:00:14 [INFO] Result directory initialized: ./regression_20250317_200014
+2025-03-17 20:00:14 [INFO] Logs directory initialized: ./regression_20250317_200014/logs
+2025-03-17 20:05:07 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:05:07 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:05:07 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:05:07 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode3', 'mode2'}
+2025-03-17 20:05:07 [INFO] [DEBUG] Final mode list: ['mode1', 'mode3', 'mode2']
+2025-03-17 20:05:07 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:05:07 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:05:07 [INFO] Compiling mode: mode1...
+2025-03-17 20:05:07 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:05:09 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:05:09 [INFO] Compiling mode: mode3...
+2025-03-17 20:05:09 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:05:11 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:05:11 [INFO] Compiling mode: mode2...
+2025-03-17 20:05:11 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:05:13 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:05:19 [INFO] Case list: [{'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}, {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}]
+2025-03-17 20:05:19 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:05:24 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_1', 'SEED': [123456, 234567], 'SIM_OPTS': 'pl=UVM_HIGH', 'RUN_TIMES': 3, 'TIMEOUT_LMT': 300, 'MODE': ['mode1', 'mode2']}
+2025-03-17 20:05:27 [ERROR] Missing key 'tc' in case: {'TC': 'Test_Case_2', 'SEED': 987654, 'SIM_OPTS': 'pl=UVM_LOW', 'RUN_TIMES': 2, 'MODE': ['mode3']}
+2025-03-17 20:05:27 [INFO] Simulation completed for mode: mode1. Failed cases: 2
+2025-03-17 20:05:27 [INFO] Starting simulations for mode: mode3
+2025-03-17 20:06:02 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:06:02 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:06:02 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:06:02 [INFO] [INFO] Extracted modes from TC_LIST: {'mode3', 'mode1', 'mode2'}
+2025-03-17 20:06:02 [INFO] [DEBUG] Final mode list: ['mode3', 'mode1', 'mode2']
+2025-03-17 20:06:02 [INFO] [INFO] Normalized 2 testcases.
+2025-03-17 20:06:02 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:06:02 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:06:02 [INFO] Compiling mode: mode3...
+2025-03-17 20:06:02 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:06:04 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:06:04 [INFO] Compiling mode: mode1...
+2025-03-17 20:06:04 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:06:06 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:06:06 [INFO] Compiling mode: mode2...
+2025-03-17 20:06:06 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:06:08 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:06:17 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': [123456, 234567], 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1', 'mode2']}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode3']}]
+2025-03-17 20:06:17 [INFO] Starting simulations for mode: mode3
+2025-03-17 20:06:22 [ERROR] Missing key 'wave' in case: {'tc': 'Test_Case_1', 'seed': [123456, 234567], 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1', 'mode2']}
+2025-03-17 20:06:51 [ERROR] Missing key 'wave' in case: {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode3']}
+2025-03-17 20:06:51 [INFO] Simulation completed for mode: mode3. Failed cases: 2
+2025-03-17 20:06:51 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:07:01 [ERROR] Missing key 'wave' in case: {'tc': 'Test_Case_1', 'seed': [123456, 234567], 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1', 'mode2']}
+2025-03-17 20:17:21 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:17:21 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:17:21 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:17:21 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode3', 'mode2'}
+2025-03-17 20:17:21 [INFO] [DEBUG] Final mode list: ['mode1', 'mode3', 'mode2']
+2025-03-17 20:17:21 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:17:21 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:17:21 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:17:21 [INFO] Compiling mode: mode1...
+2025-03-17 20:17:21 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:17:23 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:17:23 [INFO] Compiling mode: mode3...
+2025-03-17 20:17:23 [INFO] [DEBUG] Log path: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:17:25 [INFO] Compilation successful for mode: mode3. Log: ./regression_20250317/mode3/log/cmp.log
+2025-03-17 20:17:25 [INFO] Compiling mode: mode2...
+2025-03-17 20:17:25 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:17:27 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:17:27 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': [123456, 234567], 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1', 'mode2'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode3'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:17:27 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:17:36 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: [123456, 234567]
+2025-03-17 20:17:41 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: [123456, 234567]. Log: ./regression_20250317/mode1/log/Test_Case_1_[123456, 234567].log
+2025-03-17 20:17:42 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:17:43 [ERROR] Simulation failed - Testcase: Test_Case_2, Seed: 987654. Check log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:17:43 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:17:43 [INFO] Starting simulations for mode: mode3
+2025-03-17 20:18:03 [INFO] Running simulation - Mode: mode3, Testcase: Test_Case_1, Seed: [123456, 234567]
+2025-03-17 20:18:04 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: [123456, 234567]. Log: ./regression_20250317/mode3/log/Test_Case_1_[123456, 234567].log
+2025-03-17 20:25:59 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:25:59 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:25:59 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:25:59 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode2'}
+2025-03-17 20:25:59 [INFO] [DEBUG] Final mode list: ['mode1', 'mode2']
+2025-03-17 20:25:59 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:25:59 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:25:59 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:25:59 [INFO] Compiling mode: mode1...
+2025-03-17 20:25:59 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:26:01 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:26:01 [INFO] Compiling mode: mode2...
+2025-03-17 20:26:01 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:26:03 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:26:03 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:26:03 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:26:03 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:26:03 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:26:04 [ERROR] Simulation failed - Testcase: Test_Case_2, Seed: 987654. Check log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:26:04 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:26:04 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:26:04 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:26:04 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:26:04 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:26:05 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:26:05 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:26:05 [INFO] Simulation completed for mode: mode2. Failed cases: 0
+2025-03-17 20:26:05 [INFO] Generating coverage report for mode: mode1
+2025-03-17 20:26:05 [ERROR] Coverage generation failed for mode: mode1
+2025-03-17 20:26:05 [ERROR] Coverage generation error for mode: mode1. Exception: Urg command error
+2025-03-17 20:37:59 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:37:59 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:37:59 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:37:59 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode2'}
+2025-03-17 20:37:59 [INFO] [DEBUG] Final mode list: ['mode1', 'mode2']
+2025-03-17 20:37:59 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:37:59 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:37:59 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:37:59 [INFO] Compiling mode: mode1...
+2025-03-17 20:37:59 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:38:01 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:38:01 [INFO] Compiling mode: mode2...
+2025-03-17 20:38:01 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:38:03 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:38:03 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:38:03 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:38:03 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:38:03 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:38:04 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:38:04 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:38:04 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:38:04 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:38:04 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:38:04 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:38:05 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:38:05 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:38:05 [INFO] Simulation completed for mode: mode2. Failed cases: 0
+2025-03-17 20:38:05 [INFO] Starting Coverage Generation for mode: mode1 with command: make urg mode=mode1
+2025-03-17 20:38:05 [ERROR] Coverage Generation failed for mode: mode1
+2025-03-17 20:38:05 [ERROR] Command output: 
+2025-03-17 20:38:05 [ERROR] Command error: make: *** No rule to make target 'urg'.  Stop.
+
+2025-03-17 20:38:05 [ERROR] Coverage Generation error for mode: mode1. Exception: Coverage Generation command error for mode: mode1. Returned 2
+2025-03-17 20:38:05 [ERROR] Failed to generate coverage report for mode: mode1. Error: Coverage Generation command error for mode: mode1. Returned 2
+2025-03-17 20:38:05 [ERROR] Failed to generate coverage report for mode: mode1
+2025-03-17 20:39:15 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:39:15 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:39:15 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:39:15 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode2'}
+2025-03-17 20:39:15 [INFO] [DEBUG] Final mode list: ['mode1', 'mode2']
+2025-03-17 20:39:15 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:39:15 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:39:15 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:39:15 [INFO] Compiling mode: mode1...
+2025-03-17 20:39:15 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:39:17 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:39:17 [INFO] Compiling mode: mode2...
+2025-03-17 20:39:17 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:39:19 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:39:19 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:39:19 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:39:19 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:39:19 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:39:20 [ERROR] Simulation failed - Testcase: Test_Case_2, Seed: 987654. Check log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:39:20 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:39:20 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:39:20 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:39:20 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:39:20 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:39:21 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:39:21 [ERROR] Simulation failed - Testcase: Test_Case_2, Seed: 987654. Check log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:39:21 [INFO] Simulation completed for mode: mode2. Failed cases: 2
+2025-03-17 20:39:21 [INFO] Starting Coverage Generation for mode: mode1 with command: make urg mode=mode1
+2025-03-17 20:39:21 [ERROR] Coverage Generation failed for mode: mode1
+2025-03-17 20:39:21 [ERROR] Command output: 
+2025-03-17 20:39:21 [ERROR] Command error: make: *** No rule to make target 'urg'.  Stop.
+
+2025-03-17 20:39:21 [ERROR] Coverage Generation error for mode: mode1. Exception: Coverage Generation command error for mode: mode1. Returned 2
+2025-03-17 20:39:21 [ERROR] Failed to generate coverage report for mode: mode1. Error: Coverage Generation command error for mode: mode1. Returned 2
+2025-03-17 20:39:21 [ERROR] Failed to generate coverage report for mode: mode1
+2025-03-17 20:39:21 [INFO] Starting Coverage Generation for mode: mode2 with command: make urg mode=mode2
+2025-03-17 20:39:21 [ERROR] Coverage Generation failed for mode: mode2
+2025-03-17 20:39:21 [ERROR] Command output: 
+2025-03-17 20:39:21 [ERROR] Command error: make: *** No rule to make target 'urg'.  Stop.
+
+2025-03-17 20:39:21 [ERROR] Coverage Generation error for mode: mode2. Exception: Coverage Generation command error for mode: mode2. Returned 2
+2025-03-17 20:39:21 [ERROR] Failed to generate coverage report for mode: mode2. Error: Coverage Generation command error for mode: mode2. Returned 2
+2025-03-17 20:39:21 [ERROR] Failed to generate coverage report for mode: mode2
+2025-03-17 20:39:21 [INFO] Final report generated at: ./regression_20250317/final_report.json
+2025-03-17 20:46:08 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:46:08 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:46:08 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:46:08 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode2'}
+2025-03-17 20:46:08 [INFO] [DEBUG] Final mode list: ['mode1', 'mode2']
+2025-03-17 20:46:08 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:46:08 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:46:08 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:46:08 [INFO] Compiling mode: mode1...
+2025-03-17 20:46:08 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:46:10 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:46:10 [INFO] Compiling mode: mode2...
+2025-03-17 20:46:10 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:46:12 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:46:12 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:46:12 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:46:12 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:46:12 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:46:13 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:46:13 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:46:13 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:46:13 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:46:13 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:46:13 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:46:14 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:46:14 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:46:14 [INFO] Simulation completed for mode: mode2. Failed cases: 1
+2025-03-17 20:46:14 [INFO] Starting Coverage Generation for mode: mode1 with command: make urg mode=mode1
+2025-03-17 20:46:15 [INFO] Coverage Generation successfully completed for mode: mode1
+2025-03-17 20:46:15 [ERROR] Coverage directory not found: ./regression_20250317/mode1/coverage
+2025-03-17 20:46:15 [ERROR] Failed to generate coverage report for mode: mode1. Error: Coverage directory not found for mode: mode1
+2025-03-17 20:46:15 [ERROR] Failed to generate coverage report for mode: mode1
+2025-03-17 20:46:15 [INFO] Starting Coverage Generation for mode: mode2 with command: make urg mode=mode2
+2025-03-17 20:46:16 [INFO] Coverage Generation successfully completed for mode: mode2
+2025-03-17 20:46:16 [ERROR] Coverage directory not found: ./regression_20250317/mode2/coverage
+2025-03-17 20:46:16 [ERROR] Failed to generate coverage report for mode: mode2. Error: Coverage directory not found for mode: mode2
+2025-03-17 20:46:16 [ERROR] Failed to generate coverage report for mode: mode2
+2025-03-17 20:46:16 [INFO] Final report generated at: ./regression_20250317/final_report.json
+2025-03-17 20:47:55 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:47:55 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:47:55 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:47:55 [INFO] [INFO] Extracted modes from TC_LIST: {'mode1', 'mode2'}
+2025-03-17 20:47:55 [INFO] [DEBUG] Final mode list: ['mode1', 'mode2']
+2025-03-17 20:47:55 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:47:55 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:47:55 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:47:55 [INFO] Compiling mode: mode1...
+2025-03-17 20:47:55 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:47:57 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:47:57 [INFO] Compiling mode: mode2...
+2025-03-17 20:47:57 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:47:59 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:47:59 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:47:59 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:47:59 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:47:59 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:48:00 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:48:00 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:48:00 [INFO] Simulation completed for mode: mode1. Failed cases: 0
+2025-03-17 20:48:00 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:48:00 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:48:00 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:48:01 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:48:01 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:48:01 [INFO] Simulation completed for mode: mode2. Failed cases: 1
+2025-03-17 20:48:01 [INFO] Starting Coverage Generation for mode: mode1 with command: make urg mode=mode1
+2025-03-17 20:48:02 [INFO] Coverage Generation successfully completed for mode: mode1
+2025-03-17 20:48:48 [INFO] Loading regression configuration from regress_list.py...
+2025-03-17 20:48:48 [INFO] Loading configuration class: regress_cfg
+2025-03-17 20:48:48 [INFO] Configuration class regress_cfg loaded successfully.
+2025-03-17 20:48:48 [INFO] [INFO] Extracted modes from TC_LIST: {'mode2', 'mode1'}
+2025-03-17 20:48:48 [INFO] [DEBUG] Final mode list: ['mode2', 'mode1']
+2025-03-17 20:48:48 [INFO] [INFO] Normalized 2 testcases with defaults.
+2025-03-17 20:48:48 [INFO] Result directory initialized: ./regression_20250317
+2025-03-17 20:48:48 [INFO] Logs directory initialized: ./regression_20250317/logs
+2025-03-17 20:48:48 [INFO] Compiling mode: mode2...
+2025-03-17 20:48:48 [INFO] [DEBUG] Log path: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:48:50 [INFO] Compilation successful for mode: mode2. Log: ./regression_20250317/mode2/log/cmp.log
+2025-03-17 20:48:50 [INFO] Compiling mode: mode1...
+2025-03-17 20:48:50 [INFO] [DEBUG] Log path: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:48:52 [INFO] Compilation successful for mode: mode1. Log: ./regression_20250317/mode1/log/cmp.log
+2025-03-17 20:48:52 [INFO] Case list: [{'tc': 'Test_Case_1', 'seed': 123456, 'sim_opts': 'pl=UVM_HIGH', 'run_times': 3, 'timeout_lmt': 300, 'mode': ['mode1'], 'wave': 'off', 'ccov': 'on'}, {'tc': 'Test_Case_2', 'seed': 987654, 'sim_opts': 'pl=UVM_LOW', 'run_times': 2, 'mode': ['mode2'], 'wave': 'off', 'ccov': 'on'}]
+2025-03-17 20:48:52 [INFO] Starting simulations for mode: mode2
+2025-03-17 20:48:52 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:48:52 [INFO] Running simulation - Mode: mode2, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:48:53 [INFO] Simulation passed - Testcase: Test_Case_1, Seed: 123456. Log: ./regression_20250317/mode2/log/Test_Case_1_123456.log
+2025-03-17 20:48:53 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode2/log/Test_Case_2_987654.log
+2025-03-17 20:48:53 [INFO] Simulation completed for mode: mode2. Failed cases: 0
+2025-03-17 20:48:53 [INFO] Starting simulations for mode: mode1
+2025-03-17 20:48:53 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_1, Seed: 123456
+2025-03-17 20:48:53 [INFO] Running simulation - Mode: mode1, Testcase: Test_Case_2, Seed: 987654
+2025-03-17 20:48:54 [ERROR] Simulation failed - Testcase: Test_Case_1, Seed: 123456. Check log: ./regression_20250317/mode1/log/Test_Case_1_123456.log
+2025-03-17 20:48:54 [INFO] Simulation passed - Testcase: Test_Case_2, Seed: 987654. Log: ./regression_20250317/mode1/log/Test_Case_2_987654.log
+2025-03-17 20:48:54 [INFO] Simulation completed for mode: mode1. Failed cases: 1
+2025-03-17 20:48:54 [INFO] Starting Coverage Generation for mode: mode2 with command: make urg mode=mode2
+2025-03-17 20:48:56 [INFO] Coverage Generation successfully completed for mode: mode2
+2025-03-17 20:49:11 [INFO] Starting Coverage Generation for mode: mode1 with command: make urg mode=mode1
+2025-03-17 20:49:12 [INFO] Coverage Generation successfully completed for mode: mode1
+2025-03-17 20:49:15 [INFO] Final report generated at: ./regression_20250317/final_report.json
