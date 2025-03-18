@@ -1,0 +1,28 @@
+Dashboard
+
+Date: Mon Mar 17 21:37:54 2025
+
+User: eda
+
+Version: L-2016.06
+Command line: urg -dir simv.vdb -show ratios -format text -metric line+fsm+cond+tgl+assert -attribute attr.list 
+
+Number of tests: 2
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE   LINE            COND        TOGGLE          ASSERT       
+ 80.23  100.00 200/200  --     0/0   97.84 317/324   42.86 18/42 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE   LINE            COND           TOGGLE          ASSERT        NAME     
+ 80.23  100.00 200/200  --     --       97.84 317/324   42.86 18/42  tb_jk_ff 
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE   LINE          COND        TOGGLE        ASSERT     
+ 78.87  100.00 78/78  --     0/0   93.75 30/32   42.86 3/7 
+

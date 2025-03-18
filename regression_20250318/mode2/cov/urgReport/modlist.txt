@@ -1,0 +1,14 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE   LINE          COND        TOGGLE        ASSERT     
+ 78.87  100.00 78/78  --     0/0   93.75 30/32   42.86 3/7 
+
+
+Total modules in report: 3
+-------------------------------------------------------------------------------
+SCORE   LINE          COND           TOGGLE        ASSERT         NAME     
+ 78.17  100.00 7/7    --     --       91.67 11/12   42.86 3/7     jk_ff    
+ 95.83  100.00 68/68  --     --       91.67 11/12  --     --      tb_jk_ff 
+100.00  100.00 3/3    --     --      100.00 8/8    --     --      d        
+

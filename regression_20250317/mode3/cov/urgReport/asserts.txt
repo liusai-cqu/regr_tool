@@ -1,0 +1,115 @@
+Assertions
+
+
+Assertions by Category
+           ASSERT PROPERTIES SEQUENCES
+Total          36          6         0
+Category 0     36          6         0
+
+-------------------------------------------------------------------------------
+
+Assertions by Severity
+           ASSERT PROPERTIES SEQUENCES
+Total          36          6         0
+Severity 0     36          6         0
+
+-------------------------------------------------------------------------------
+
+Summary for Assertions
+                 NUMBER PERCENT
+Total Number         36  100.00
+Uncovered            18   50.00
+Success              18   50.00
+Failure              18   50.00
+Incomplete            0    0.00
+Without Attempts      0    0.00
+
+-------------------------------------------------------------------------------
+
+Summary for Cover Properties
+             NUMBER PERCENT
+Total Number      6  100.00
+Uncovered         6  100.00
+Matches           0    0.00
+
+-------------------------------------------------------------------------------
+
+Detail Report for Assertions
+
+Assertions Uncovered:
+   ASSERTIONS    CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_jk_ff.ff1.CA1        0        0       12              0        0          0
+tb_jk_ff.ff1.CA2        0        0       12              0        0          0
+tb_jk_ff.ff1.CA4        0        0       12              0        0          0
+tb_jk_ff.ff2.CA1        0        0       12              0        0          0
+tb_jk_ff.ff2.CA2        0        0       12              0        0          0
+tb_jk_ff.ff2.CA4        0        0       12              0        0          0
+tb_jk_ff.ff3.CA1        0        0       12              0        0          0
+tb_jk_ff.ff3.CA2        0        0       12              0        0          0
+tb_jk_ff.ff3.CA4        0        0       12              0        0          0
+tb_jk_ff.ff4.CA1        0        0       12              0        0          0
+tb_jk_ff.ff4.CA2        0        0       12              0        0          0
+tb_jk_ff.ff4.CA4        0        0       12              0        0          0
+tb_jk_ff.ff5.CA1        0        0       12              0        0          0
+tb_jk_ff.ff5.CA2        0        0       12              0        0          0
+tb_jk_ff.ff5.CA4        0        0       12              0        0          0
+tb_jk_ff.ff6.CA1        0        0       12              0        0          0
+tb_jk_ff.ff6.CA2        0        0       12              0        0          0
+tb_jk_ff.ff6.CA4        0        0       12              0        0          0
+
+Assertions Success:
+   ASSERTIONS    CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_jk_ff.ff1.IA1        0        0       12              3        9          0
+tb_jk_ff.ff1.IA2        0        0       12              3        9          0
+tb_jk_ff.ff1.IA3        0        0       12              3        9          0
+tb_jk_ff.ff2.IA1        0        0       12              3        9          0
+tb_jk_ff.ff2.IA2        0        0       12              3        9          0
+tb_jk_ff.ff2.IA3        0        0       12              3        9          0
+tb_jk_ff.ff3.IA1        0        0       12              3        9          0
+tb_jk_ff.ff3.IA2        0        0       12              3        9          0
+tb_jk_ff.ff3.IA3        0        0       12              3        9          0
+tb_jk_ff.ff4.IA1        0        0       12              3        9          0
+tb_jk_ff.ff4.IA2        0        0       12              3        9          0
+tb_jk_ff.ff4.IA3        0        0       12              3        9          0
+tb_jk_ff.ff5.IA1        0        0       12              3        9          0
+tb_jk_ff.ff5.IA2        0        0       12              3        9          0
+tb_jk_ff.ff5.IA3        0        0       12              3        9          0
+tb_jk_ff.ff6.IA1        0        0       12              3        9          0
+tb_jk_ff.ff6.IA2        0        0       12              3        9          0
+tb_jk_ff.ff6.IA3        0        0       12              3        9          0
+
+Assertions Failure:
+   ASSERTIONS    CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+tb_jk_ff.ff1.IA1        0        0       12              3        9          0
+tb_jk_ff.ff1.IA2        0        0       12              3        9          0
+tb_jk_ff.ff1.IA3        0        0       12              3        9          0
+tb_jk_ff.ff2.IA1        0        0       12              3        9          0
+tb_jk_ff.ff2.IA2        0        0       12              3        9          0
+tb_jk_ff.ff2.IA3        0        0       12              3        9          0
+tb_jk_ff.ff3.IA1        0        0       12              3        9          0
+tb_jk_ff.ff3.IA2        0        0       12              3        9          0
+tb_jk_ff.ff3.IA3        0        0       12              3        9          0
+tb_jk_ff.ff4.IA1        0        0       12              3        9          0
+tb_jk_ff.ff4.IA2        0        0       12              3        9          0
+tb_jk_ff.ff4.IA3        0        0       12              3        9          0
+tb_jk_ff.ff5.IA1        0        0       12              3        9          0
+tb_jk_ff.ff5.IA2        0        0       12              3        9          0
+tb_jk_ff.ff5.IA3        0        0       12              3        9          0
+tb_jk_ff.ff6.IA1        0        0       12              3        9          0
+tb_jk_ff.ff6.IA2        0        0       12              3        9          0
+tb_jk_ff.ff6.IA3        0        0       12              3        9          0
+
+-------------------------------------------------------------------------------
+
+Detail Report for Cover Properties
+
+Cover Properties Uncovered:
+COVER PROPERTIES CATEGORY SEVERITY ATTEMPTS MATCHES INCOMPLETE
+tb_jk_ff.ff1.CA3        0        0       12       0          0
+tb_jk_ff.ff2.CA3        0        0       12       0          0
+tb_jk_ff.ff3.CA3        0        0       12       0          0
+tb_jk_ff.ff4.CA3        0        0       12       0          0
+tb_jk_ff.ff5.CA3        0        0       12       0          0
+tb_jk_ff.ff6.CA3        0        0       12       0          0
+
+
