@@ -35,6 +35,10 @@ class GConf:
         loader = RegressLoader(self.logger)
         config_class = loader.load_regress_class("regress_cfg")
 
+        # 从配置类中动态获取 ERR_KEYWORD
+        self.err_keyword = getattr(config_class, "ERR_KEYWORD", "Failed|Error|FAILED|ERROR")
+        self.logger.info(f"Loaded error keywords for log parsing: {self.err_keyword}")
+
         # 配置类加载的参数
         if args.mode:
             self.mode = args.mode  # 使用命令行模式列表
@@ -53,7 +57,10 @@ class GConf:
         testcases = self._load_testcases(args.testcases, config_class)
         self.tc_list = self._normalize_case_keys(testcases)
 
+        # 从配置类中动态获取其他参数
         self.blk_name = getattr(config_class, "BLK_NAME", "default_block")  # 测试块名称
+        self.common_timeout_lmt = getattr(config_class, "COMMON_TIMEOUT_LMT", 15)  # 超时限制
+        self.wave = getattr(config_class, "WAVE", "null")  # 波形配置
 
         # 配置覆盖率功能
         if self.disable_cov:
@@ -72,6 +79,7 @@ class GConf:
         将测试用例中的所有键名转换为小写，并补充默认值
         """
         normalized_testcases = []
+
         default_fields = {
             "wave": "off",  # 默认关闭波形
             "ccov": "on"    # 默认开启覆盖率
