@@ -1,6 +1,8 @@
 import os
 import json
-import re
+import subprocess
+import re  # 显式导入 're'，以防语法中确实需要正则
+
 from coverage_parser import CoverageParser
 
 
@@ -13,8 +15,33 @@ class ReportGenerator:
         self.gconf = gconf
         self.logger = gconf.logger
         self.result_path = gconf.result_path
-         # 使用正则表达式编译 ERR_KEYWORD
-        self.err_keyword_regex = re.compile(gconf.err_keyword, re.IGNORECASE)
+
+        # 定义排除模式和错误关键词的正则
+        self.exclusion_patterns = r"NO UVM_ERROR|UVM_ERROR\s+:\s+0"  # 忽略的模式
+        self.error_patterns = gconf.err_keyword  # 重点匹配的错误关键词列表（例如: UVM_ERROR|ASSERTION|FAIL|ERROR）
+
+    def log_contains_error(self, log_path):
+        """
+        使用 egrep 检查日志文件是否包含错误关键词，同时跳过排除模式
+        """
+        try:
+            # 构造 egrep 管道命令：先排除模式，再匹配错误
+            cmd = f"grep -vE '{self.exclusion_patterns}' {log_path} | grep -E '{self.error_patterns}'"
+
+            # 执行 egrep 命令并获取结果
+            result = subprocess.run(
+                cmd,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                universal_newlines=True,
+            )
+
+            # 如果返回码为 0，说明命中错误关键词
+            return result.returncode == 0
+        except Exception as e:
+            self.logger.error(f"Error while processing log file {log_path}: {e}")
+            return False
 
     def generate_final_report(self):
         """
@@ -24,7 +51,12 @@ class ReportGenerator:
 
         for mode in self.gconf.mode:
             self.logger.info(f"Generating report for mode: {mode}")
-            mode_report = {"coverage": {"summary": {}, "hierarchical": []}, "results": {}, "statistics": {}, "compilation": {}}  # 每个模式的报告结构
+            mode_report = {
+                "coverage": {"summary": {}, "hierarchical": []},
+                "results": {},
+                "statistics": {},
+                "compilation": {}
+            }  # 每个模式的报告结构
 
             # 模式的日志目录和覆盖率目录
             log_dir = os.path.join(self.result_path, mode, "log")
@@ -49,13 +81,12 @@ class ReportGenerator:
                 cmp_log_path = os.path.join(log_dir, "cmp.log")
                 if os.path.exists(cmp_log_path):
                     self.logger.info(f"Processing compilation log for mode: {mode}")
-                    with open(cmp_log_path, "r") as cmp_log_file:
-                        cmp_content = cmp_log_file.read()
-                        has_errors = self.err_keyword_regex.search(cmp_content) is not None  # 搜索是否包含错误关键词
-                        mode_report["compilation"] = {
-                            "log_file": "cmp.log",
-                            "status": "fail" if has_errors else "pass"
-                        }
+                    # 使用 egrep 检查编译日志
+                    has_errors = self.log_contains_error(cmp_log_path)
+                    mode_report["compilation"] = {
+                        "log_file": "cmp.log",
+                        "status": "fail" if has_errors else "pass"
+                    }
                 else:
                     self.logger.warning(f"Compilation log not found for mode: {mode}")
             except Exception as e:
@@ -70,7 +101,7 @@ class ReportGenerator:
 
                     for log in logs:
                         # 假设日志文件名格式为 "<用例名>_<seed>.log"
-                        match = re.match(r"^(.*)_([0-9]+)\.log$", log)
+                        match = re.match(r"^(.*)_([0-9]+)\.log$", log)  # 保留必要的正则应用
                         if match:
                             test_case = match.group(1)  # 提取用例名
                             seed = match.group(2)       # 提取种子
@@ -87,16 +118,11 @@ class ReportGenerator:
                             # 更新总运行次数
                             stats_summary[test_case]["total_runs"] += 1
 
-                            # 检查日志文件内容中的运行状态
-                            try:
-                                with open(log_path, "r") as f:
-                                    log_content = f.read()
-                                    if self.err_keyword_regex.search(log_content):
-                                        stats_summary[test_case]["fail_count"] += 1
-                                    else:
-                                        stats_summary[test_case]["pass_count"] += 1
-                            except Exception as e:
-                                self.logger.error(f"Error reading log file {log_path}: {str(e)}")
+                            # 使用 egrep 检查用例日志内容
+                            if self.log_contains_error(log_path):
+                                stats_summary[test_case]["fail_count"] += 1
+                            else:
+                                stats_summary[test_case]["pass_count"] += 1
 
                             # 添加日志文件到测试用例日志列表
                             test_case_logs.append({"test_case": test_case, "seed": seed, "file": log})

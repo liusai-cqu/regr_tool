@@ -77,8 +77,8 @@ class DirectoryManager:
             raise ValueError("Regression directory is not initialized. Call `create_regression_directory` first!")
 
         self.copy_file("./Makefile", "Makefile")
-        self.copy_file("./mock_vcs.sh", "mock_vcs.sh")
-        self.copy_file("./mock_simv.sh", "mock_simv.sh")
+        # self.copy_file("./mock_vcs.sh", "mock_vcs.sh")
+        # self.copy_file("./mock_simv.sh", "mock_simv.sh")
 
     def create_mode_directories(self, modes):
         """
