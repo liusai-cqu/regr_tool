@@ -7,8 +7,8 @@ class regress_cfg:
 
     ERR_KEYWORD = "Failed|Error|FAILED|ERROR"
     BLK_NAME = "cm_ahb_mon"
-    CCOV = True
+    CCOV = "on"
     COMMON_TIMEOUT_LMT = 15
-    WAVE = "null"
+    WAVE = "off"
     BSB_OPTS = "Local Machine"
     REGRESS_UDC = ""

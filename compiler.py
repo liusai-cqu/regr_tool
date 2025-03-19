@@ -27,7 +27,7 @@ class Compiler:
         try:
             # 调用 Makefile
             process = subprocess.run(
-                ["make", "cmp", f"mode={mode}", f"ccov={self.gconf.ccov}"],
+                ["make", "cmp", f"mode={mode}", f"wave={self.gconf.wave}", f"ccov={self.gconf.ccov}"],
                 cwd=self.gconf.result_path,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,

@@ -60,8 +60,9 @@ class GConf:
         # 从配置类中动态获取其他参数
         self.blk_name = getattr(config_class, "BLK_NAME", "default_block")  # 测试块名称
         self.common_timeout_lmt = getattr(config_class, "COMMON_TIMEOUT_LMT", 15)  # 超时限制
-        self.wave = getattr(config_class, "WAVE", "null")  # 波形配置
-
+        self.wave = getattr(config_class, "WAVE", "off")  # 波形配置
+        self.ccov = getattr(config_class, "CCOV", "on")  # 覆盖率配置
+        
         # 配置覆盖率功能
         if self.disable_cov:
             self.logger.warning("Coverage functionality has been disabled by the user!")

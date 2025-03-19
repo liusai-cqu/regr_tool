@@ -32,7 +32,7 @@ all: cmp ncrun urg
 # 编译命令 - make cmp
 # -------------------------------------------------
 cmp:
-	@echo "Compiling mode: $(mode)"
+	@echo "Compiling mode: $(mode) $(ccov) $(wave)"
 	@mkdir -p $(exec_dir) $(log_dir) $(cov_dir) $(wave_dir)
 	@{ \
 		echo "[INFO] Compilation started"; \
@@ -71,7 +71,9 @@ ncrun:
 		echo "NO UVM_ERROR" >> $(ncrun_log); \
 	}
 	@echo "[INFO] UVM_ERROR :    0"
+	@echo "[INFO] UVM_FATAL :    0"
 	@echo "NO UVM_ERROR"
+	@echo "NO UVM_FATAL"	
 	@if grep -q "Error" $(ncrun_log); then \
 		echo "[ERROR] Simulation failed. Check $(ncrun_log)"; \
 		exit 1; \
