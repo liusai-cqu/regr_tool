@@ -1,8 +1,7 @@
 import os
 import json
 import subprocess
-import re  # 显式导入 're'，以防语法中确实需要正则
-
+import re
 from coverage_parser import CoverageParser
 
 
@@ -22,13 +21,13 @@ class ReportGenerator:
 
     def log_contains_error(self, log_path):
         """
-        使用 egrep 检查日志文件是否包含错误关键词，同时跳过排除模式
+        使用 grep 检查日志文件是否包含错误关键词
         """
         try:
-            # 构造 egrep 管道命令：先排除模式，再匹配错误
+            # 构造 grep 命令：先排除模式，再匹配错误
             cmd = f"grep -vE '{self.exclusion_patterns}' {log_path} | grep -E '{self.error_patterns}'"
 
-            # 执行 egrep 命令并获取结果
+            # 执行 grep 命令并获取结果
             result = subprocess.run(
                 cmd,
                 shell=True,
@@ -52,25 +51,24 @@ class ReportGenerator:
         for mode in self.gconf.mode:
             self.logger.info(f"Generating report for mode: {mode}")
             mode_report = {
-                "coverage": {"summary": {}, "hierarchical": []},
-                "results": {},
-                "statistics": {},
-                "compilation": {}
-            }  # 每个模式的报告结构
+                "coverage": {},  # 覆盖率数据仅包含 summary
+                "results": {},  # 测试用例结果
+                "statistics": {},  # 汇总统计
+                "compilation": {},  # 编译结果
+            }
 
             # 模式的日志目录和覆盖率目录
             log_dir = os.path.join(self.result_path, mode, "log")
             cov_dir = os.path.join(self.result_path, mode, "cov")
 
-            # 解析覆盖率数据
+            # 解析覆盖率数据 (仅解析 summary)
             try:
                 dashboard_path = os.path.join(cov_dir, "urgReport", "dashboard.txt")
                 if os.path.exists(dashboard_path):
-                    self.logger.info(f"Parsing coverage data for mode: {mode}")
+                    self.logger.info(f"Parsing coverage summary for mode: {mode}")
                     parser = CoverageParser(self.result_path, mode)
                     coverage_data = parser.parse_dashboard()
-                    mode_report["coverage"]["summary"] = coverage_data.get("summary", {})
-                    mode_report["coverage"]["hierarchical"] = coverage_data.get("hierarchical", [])
+                    mode_report["coverage"] = coverage_data.get("summary", {})
                 else:
                     self.logger.warning(f"Dashboard file not found for mode: {mode}")
             except Exception as e:
@@ -81,18 +79,18 @@ class ReportGenerator:
                 cmp_log_path = os.path.join(log_dir, "cmp.log")
                 if os.path.exists(cmp_log_path):
                     self.logger.info(f"Processing compilation log for mode: {mode}")
-                    # 使用 egrep 检查编译日志
+                    # 检查编译日志是否存在错误
                     has_errors = self.log_contains_error(cmp_log_path)
                     mode_report["compilation"] = {
                         "log_file": "cmp.log",
-                        "status": "fail" if has_errors else "pass"
+                        "status": "fail" if has_errors else "pass",
                     }
                 else:
                     self.logger.warning(f"Compilation log not found for mode: {mode}")
             except Exception as e:
                 self.logger.error(f"Error processing compilation log for mode {mode}: {str(e)}")
 
-            # 汇总仿真用例日志结果
+            # 测试用例日志处理
             try:
                 if os.path.exists(log_dir):
                     logs = [log for log in os.listdir(log_dir) if log.endswith(".log") and log != "cmp.log"]
@@ -101,10 +99,10 @@ class ReportGenerator:
 
                     for log in logs:
                         # 假设日志文件名格式为 "<用例名>_<seed>.log"
-                        match = re.match(r"^(.*)_([0-9]+)\.log$", log)  # 保留必要的正则应用
+                        match = re.match(r"^(.*)_([0-9]+)\.log$", log)
                         if match:
                             test_case = match.group(1)  # 提取用例名
-                            seed = match.group(2)       # 提取种子
+                            seed = match.group(2)  # 提取种子
                             log_path = os.path.join(log_dir, log)
 
                             # 初始化统计结果
@@ -112,25 +110,23 @@ class ReportGenerator:
                                 stats_summary[test_case] = {
                                     "total_runs": 0,
                                     "pass_count": 0,
-                                    "fail_count": 0
+                                    "fail_count": 0,
                                 }
 
                             # 更新总运行次数
                             stats_summary[test_case]["total_runs"] += 1
 
-                            # 使用 egrep 检查用例日志内容
+                            # 是否包含错误
                             if self.log_contains_error(log_path):
                                 stats_summary[test_case]["fail_count"] += 1
                             else:
                                 stats_summary[test_case]["pass_count"] += 1
 
-                            # 添加日志文件到测试用例日志列表
+                            # 添加日志文件到结果列表
                             test_case_logs.append({"test_case": test_case, "seed": seed, "file": log})
 
-                    # 汇总日志文件和统计结果
-                    mode_report["results"] = {
-                        "test_cases": test_case_logs
-                    }
+                    # 汇总测试用例日志和统计结果
+                    mode_report["results"] = {"test_cases": test_case_logs}
                     mode_report["statistics"] = stats_summary
                 else:
                     self.logger.warning(f"Log directory not found for mode: {mode}")
