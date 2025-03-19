@@ -97,16 +97,17 @@ urg:
 	@echo "Number of tests: 2" >> $(dashboard_file)
 	@echo "-------------------------------------------------------------------------------" >> $(dashboard_file)
 	@echo "Total Coverage Summary" >> $(dashboard_file)
-	@echo "SCORE   LINE            COND        TOGGLE          ASSERT       " >> $(dashboard_file)
-	@echo " 80.23  100.00 200/200  --     0/0   97.84 317/324   42.86 18/42 " >> $(dashboard_file)
+	@echo "SCORE   LINE            COND        TOGGLE      FSM    ASSERT       " >> $(dashboard_file)
+	@echo " 80.23  100.00 200/200  9.90  30/100   97.84 317/324 42.86 18/42 -- 0/0 " >> $(dashboard_file)
 	@echo "-------------------------------------------------------------------------------" >> $(dashboard_file)
 	@echo "Hierarchical coverage data for top-level instances" >> $(dashboard_file)
-	@echo "SCORE   LINE            COND           TOGGLE          ASSERT        NAME     " >> $(dashboard_file)
-	@echo " 80.23  100.00 200/200  --     --       97.84 317/324   42.86 18/42  tb_jk_ff " >> $(dashboard_file)
+	@echo "SCORE   LINE            COND           TOGGLE        FSM         ASSERT    NAME     " >> $(dashboard_file)
+	@echo " 80.23  100.00 200/200  9.90  30/100   97.84 317/324 42.86 18/42 -- 0/0  harness " >> $(dashboard_file)
+	@echo "  8.2  100.00 200/200   9.90  30/100   97.84 317/324 -- --       -- --  tb_jk_ff " >> $(dashboard_file)
 	@echo "-------------------------------------------------------------------------------" >> $(dashboard_file)
 	@echo "Total Module Definition Coverage Summary" >> $(dashboard_file)
-	@echo "SCORE   LINE          COND        TOGGLE        ASSERT     " >> $(dashboard_file)
-	@echo " 78.87  100.00 78/78  --     0/0   93.75 30/32   42.86 3/7" >> $(dashboard_file)
+	@echo "SCORE   LINE            COND        TOGGLE      FSM    ASSERT" >> $(dashboard_file)
+	@echo " 80.23  100.00 200/200  9.90  30/100   97.84 317/324 42.86 18/42 -- 0/0" >> $(dashboard_file)
 
 	@echo "[INFO] Dashboard report generated at $(dashboard_file)"
 	@echo "[INFO] Coverage report generated at $(report_file)"
