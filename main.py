@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from config import GConf
 from directory_manager import DirectoryManager
 from compiler import Compiler

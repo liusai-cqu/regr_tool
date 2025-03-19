@@ -68,7 +68,7 @@ class GConf:
             self.ccov = "off"
 
         # 设置回归任务主目录路径
-        self.base_dir = "./"
+        self.base_dir = "../"
         self.result_path = os.path.join(self.base_dir, self.name)  # 回归任务目录
 
         # 初始化目录结构
@@ -155,11 +155,11 @@ class GConf:
             os.makedirs(self.result_path, exist_ok=True)
 
             # 创建日志目录
-            log_dir = os.path.join(self.result_path, "logs")
-            os.makedirs(log_dir, exist_ok=True)
+            # log_dir = os.path.join(self.result_path, "logs")
+            # os.makedirs(log_dir, exist_ok=True)
 
             self.logger.info(f"Result directory initialized: {self.result_path}")
-            self.logger.info(f"Logs directory initialized: {log_dir}")
+            # self.logger.info(f"Logs directory initialized: {log_dir}")
 
         except Exception as e:
             self.logger.error(f"Failed to initialize directories: {e}")
