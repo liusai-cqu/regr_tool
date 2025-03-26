@@ -19,7 +19,7 @@ class GConf:
         self.logger = Logger(log_dir="./logs", log_level=args.log_level)
 
         # 解析命令行参数
-        self.name = args.name or f"regression_{time.strftime('%Y%m%d')}"  # 如果未指定名称，则按当前日期命名
+        self.name = args.name or f"regression_{time.strftime('%Y%m%d%H%M%S')}"  # 如果未指定名称，则按当前日期命名
         self.mode = args.mode
         self.parallel = args.parallel or 20
         self.skip_cmp = args.skip_cmp

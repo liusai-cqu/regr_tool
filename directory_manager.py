@@ -44,7 +44,7 @@ class DirectoryManager:
             self.logger.warning("Regression directory is already initialized.")
             return
 
-        date_str = datetime.now().strftime("%Y%m%d")  # 获取当前日期 YYYYMMDD 格式
+        date_str = datetime.now().strftime("%Y%m%d%H%M%S")  # 获取当前日期 YYYYMMDD 格式
         self.regression_dir = os.path.join(self.base_dir, f"regression_{date_str}")
 
         # 创建目录
