@@ -148,7 +148,7 @@ class ReportGenerator:
             final_report["modes"][mode] = mode_report
 
         # Write regression_result.log
-        self._write_regression_results(regression_results)
+        self._write_regression_results(regression_results, mode_report["statistics"], mode_report["coverage"])
 
         # 输出最终综合报告为 JSON 文件
         report_file = os.path.join(self.result_path, "final_report.json")
@@ -159,27 +159,53 @@ class ReportGenerator:
         except Exception as e:
             self.logger.error(f"Error writing final report: {str(e)}")
 
-    def _write_regression_results(self, results):
-        """Writes the failed test case information to regression_failed.log in a table format."""
-        if results:
-            log_file = os.path.join(self.result_path, "regression_failed.log")
-            try:
-                with open(log_file, "w") as f:
-                    # Table header (reordered columns)
+    def _write_regression_results(self, results, stats_summary, coverage_data):
+        """Writes the failed test case information, summary statistics, and coverage data to regression_result.log."""
+        log_file = os.path.join(self.result_path, "regression_result.log")
+        try:
+            with open(log_file, "w") as f:
+                # Summary Statistics Table
+                total_tests = sum(stats.get("total_runs", 0) for stats in stats_summary.values())
+                total_passed = sum(stats.get("pass_count", 0) for stats in stats_summary.values())
+                total_failed = sum(stats.get("fail_count", 0) for stats in stats_summary.values())
+                pass_rate = (total_passed / total_tests) * 100 if total_tests else 0
+
+                f.write("+-----------------+-------+\n")
+                f.write("|      Metric     | Value |\n")
+                f.write("+-----------------+-------+\n")
+                f.write(f"| Total Test Cases | {total_tests:<5} |\n")
+                f.write(f"| Passed          | {total_passed:<5} |\n")
+                f.write(f"| Failed          | {total_failed:<5} |\n")
+                f.write(f"| Pass Rate (%)   | {pass_rate:5.2f} |\n")
+                f.write("+-----------------+-------+\n")
+                f.write("\n")
+
+                # Coverage Data Table
+                if coverage_data:
+                    f.write("+-----------------+-------+\n")
+                    f.write("| Coverage Metric | Value |\n")
+                    f.write("+-----------------+-------+\n")
+                    for metric, value in coverage_data.items():
+                        # 修复：处理None值
+                        formatted_value = str(value) if value is not None else ""
+                        f.write(f"| {metric:<15} | {formatted_value:<5} |\n")
+                    f.write("+-----------------+-------+\n")
+                    f.write("\n")
+
+                # 修复：确保失败测试用例表格在with块内
+                if results:
                     f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
                     f.write("|    Mode    | Test Case |   Seed   |                       Log Path                      |\n")
                     f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
-
                     for result in results:
-                        # Format table rows (reordered and adjusted)
-                        mode = result['mode'].ljust(11)
-                        test_case = result['test_case'].ljust(11)
-                        seed = result['seed'].ljust(10)
-                        log_path = result['log_path'].ljust(47)
+                        mode = str(result.get('mode', '')).ljust(11)
+                        test_case = str(result.get('test_case', '')).ljust(11)
+                        seed = str(result.get('seed', '')).ljust(10)
+                        log_path = str(result.get('log_path', '')).ljust(47)
 
                         f.write(f"| {mode} | {test_case} | {seed} | {log_path} |\n")
-                        f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
+                    f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
 
-                self.logger.info(f"Regression results logged to: {log_file}")
-            except Exception as e:
-                self.logger.error(f"Error writing regression results: {str(e)}")
+            self.logger.info(f"Regression results logged to: {log_file}")
+        except Exception as e:
+            self.logger.error(f"Error writing regression results: {str(e)}")
