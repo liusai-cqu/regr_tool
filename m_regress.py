@@ -42,8 +42,7 @@ def main():
     gconf = GConf(args)
 
     # 初始化功能模块
-    # 初始化目录管理器（传入 gconf.base_dir）
-    dm = DirectoryManager(gconf.base_dir)
+    dm = DirectoryManager(gconf.base_dir, gconf.name, gconf.logger) # 将name和logger传入DirectoryManager
     compiler = Compiler(gconf)
     simulator = SimulationManager(gconf)
     coverage = CoverageManager(gconf)

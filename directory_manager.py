@@ -9,7 +9,7 @@ class DirectoryManager:
     管理回归目录的创建与初始化。
     """
 
-    def __init__(self, base_dir, logger=None):
+    def __init__(self, base_dir, name, logger=None):
         """
         初始化回归目录管理器
         :param base_dir: 基础目录路径（字符串）
@@ -21,6 +21,7 @@ class DirectoryManager:
         self.base_dir = base_dir.rstrip("/")  # 移除路径末尾的斜杠
         self.regression_dir = None  # 回归目录路径
         self.logger = logger if logger else self._default_logger()
+        self.name = name  # 回归任务名称
 
     @staticmethod
     def _default_logger():
@@ -44,9 +45,11 @@ class DirectoryManager:
             self.logger.warning("Regression directory is already initialized.")
             return
 
-        date_str = datetime.now().strftime("%Y%m%d%H%M%S")  # 获取当前日期 YYYYMMDD 格式
-        self.regression_dir = os.path.join(self.base_dir, f"regression_{date_str}")
-
+        # Use the current working directory as the base for finding the parent
+        current_dir = os.getcwd()  # Get the current working directory
+        parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir)) # Calculate parent from current directory
+        self.regression_dir = os.path.join(parent_dir, self.name)
+        # 生成回归目录名称
         # 创建目录
         os.makedirs(self.regression_dir, exist_ok=True)
         self.logger.info(f"Created regression directory: {self.regression_dir}")
@@ -76,9 +79,11 @@ class DirectoryManager:
         if not self.regression_dir:
             raise ValueError("Regression directory is not initialized. Call `create_regression_directory` first!")
 
-        self.copy_file("./Makefile", "Makefile")
-        # self.copy_file("./mock_vcs.sh", "mock_vcs.sh")
-        # self.copy_file("./mock_simv.sh", "mock_simv.sh")
+        # Get the directory of the current script (m_regress.py)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        makefile_source = os.path.join(script_dir, "Makefile") # Construct the Makefile source path
+
+        self.copy_file(makefile_source, "Makefile") # Copy from the correct source path
 
     def create_mode_directories(self, modes):
         """
