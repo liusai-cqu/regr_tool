@@ -48,6 +48,9 @@ class ReportGenerator:
         """
         final_report = {"modes": {}}  # 初始化最终报告结构
 
+        # Initialize regression_result.log content
+        regression_results = []
+
         for mode in self.gconf.mode:
             self.logger.info(f"Generating report for mode: {mode}")
             mode_report = {
@@ -119,6 +122,14 @@ class ReportGenerator:
                             # 是否包含错误
                             if self.log_contains_error(log_path):
                                 stats_summary[test_case]["fail_count"] += 1
+                                # Add fail information to regression_results
+                                fail_info = {
+                                    "mode": mode,
+                                    "test_case": test_case,
+                                    "log_path": log_path,
+                                    "seed": seed
+                                }
+                                regression_results.append(fail_info)                                
                             else:
                                 stats_summary[test_case]["pass_count"] += 1
 
@@ -136,6 +147,9 @@ class ReportGenerator:
             # 添加该模式的报告到最终报告
             final_report["modes"][mode] = mode_report
 
+        # Write regression_result.log
+        self._write_regression_results(regression_results)
+
         # 输出最终综合报告为 JSON 文件
         report_file = os.path.join(self.result_path, "final_report.json")
         try:
@@ -144,3 +158,28 @@ class ReportGenerator:
             self.logger.info(f"Final report generated at: {report_file}")
         except Exception as e:
             self.logger.error(f"Error writing final report: {str(e)}")
+
+    def _write_regression_results(self, results):
+        """Writes the failed test case information to regression_failed.log in a table format."""
+        if results:
+            log_file = os.path.join(self.result_path, "regression_failed.log")
+            try:
+                with open(log_file, "w") as f:
+                    # Table header (reordered columns)
+                    f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
+                    f.write("|    Mode    | Test Case |   Seed   |                       Log Path                      |\n")
+                    f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
+
+                    for result in results:
+                        # Format table rows (reordered and adjusted)
+                        mode = result['mode'].ljust(11)
+                        test_case = result['test_case'].ljust(11)
+                        seed = result['seed'].ljust(10)
+                        log_path = result['log_path'].ljust(47)
+
+                        f.write(f"| {mode} | {test_case} | {seed} | {log_path} |\n")
+                        f.write("+-------------+-------------+------------+-------------------------------------------------+\n")
+
+                self.logger.info(f"Regression results logged to: {log_file}")
+            except Exception as e:
+                self.logger.error(f"Error writing regression results: {str(e)}")
